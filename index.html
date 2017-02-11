@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>La Ruta de la Pizza | Buenos Aires</title>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link rel="stylesheet" href="css/style.css" type="text/css" />
+	<link rel="shortcut icon" href="images/pizza.ico" type="image/x-icon">
+	<link rel="icon" href="images/pizza.ico" type="image/x-icon">
+
+    <style>
+      html, body {
+      	    height: 100%;
+       	    margin: 0;
+      	    padding: 0;
+      }
+      #map {
+        	height: 100%;
+      }
+      .cuadro{
+    	    position: absolute;
+    		background: #fff;
+    		width: 25%;
+    		z-index: 10000000;
+    		top: 20px;
+    		-webkit-box-shadow: 4px 3px 5px 0px rgba(204,204,204,1);
+    		-moz-box-shadow: 4px 3px 5px 0px rgba(204,204,204,1);
+    		box-shadow: 4px 3px 5px 0px rgba(204,204,204,1);
+    		left: 10px;
+    		height: 65%;
+      }
+    </style>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAFcxyIYHE-kOkbdBjG1lUxoiPgzZxW-xw"></script>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous">
+    </script>
+  </head>
+  <body>
+    <div id="map">
+    </div>
+    <div class="cuadro col-md-4">
+        <span id="close" class="glyphicon glyphicon-chevron-right "style="position: absolute;left: 93%;top: 10px;font-size: 26px;cursor: pointer;float: right;"></span>
+
+        		<br>
+				<form>
+				  <div class="form-group">
+				    <label for="nombre">Nombre:</label>
+				    <input type="text" class="form-control" id="nombre" placeholder="Nombre">
+				  </div>
+				  <div class="form-inline">
+				  	<div class="form-group">
+				   	 	<label for="latitud">Latitud:</label>
+				    	<input class="form-control" id="latitud"></input>
+				    	<label for="longitud">Longitud:</label>
+				    	<input class="form-control" id="longitud"></input>
+				  	</div>
+				  </div>	
+				  <div class="form-group">
+				    <label for="direccion">Domicilio:</label>
+				    <input class="form-control" id="direccion"></input>
+				  </div>
+				  <div class="form-group" data-bind=¨click:hide¨>
+				    <label for="descripcion">Descripcion:</label>
+				    <textarea class="form-control" id="descripcion" rows="2"></textarea>
+				  </div>
+				  <div class="form-group form-inline">
+				    <label for="valorPlatoMax">Precio:</label>
+				    <input type="number" class="form-control" id="valorPlatoMax" placeholder="Precio">
+				  </div>
+				  <div class="form-group">
+				    <label for="reputacion">Reputacion:</label>
+				    <input type="text" class="form-control" id="reputacion" placeholder="Reputacion">
+				  </div>
+				  <div class="form-group">
+				    <label for="link">URL:</label>
+				    <input type="text" class="form-control" id="link" placeholder="Link">
+				  </div>
+				  <div class="form-group">
+				    <label for="imagen">Imagen:</label>
+				    <input type="file" id="imagen">
+				  </div>
+
+				  <div id="registrar" class="btn btn-default">Registrar</div>
+				</form>
+
+    </div>
+  </body>
+  <script src="js/script.js"></script>
+</html>
